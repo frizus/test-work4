@@ -11,7 +11,7 @@
       ],
   ],
 ```
-6. Заменить в .htaccess
+6. Заменить в `.htaccess`
 ```apache
 RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
 RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
@@ -43,7 +43,7 @@ return function (RoutingConfigurator $routes) {
    2. `POST /local/rest/auth` принимает параметры `login`, `password`
    3. `GET /local/rest/users` принимает параметр `page`, например `/local/rest/users/?page=page-2`
    4. `GET /local/rest/users/<id пользователя>`, например `/local/rest/users/1`
-2. Страницы `users` требуют отправки заголовка `Authorization: Bearer <jwt token>`. JWT токен который можно получить на `POST` страницах
+2. Страницы `users` требуют отправки заголовка `Authorization: Bearer <jwt token>`. JWT токен можно получить на `POST` страницах.
   
 
 2. В настройках модуля можно изменить время жизни JWT токена (по умолчанию `2.5 часа`), `Ключ для подписи jwt` (`HS256` и `RS256`), `Публичный ключ` (для `RS256`)
